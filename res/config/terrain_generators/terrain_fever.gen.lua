@@ -382,7 +382,7 @@ return {
 		-- #### OCEAN
 		-- ###########################################################################################################
 		local oc_final = mkTemp:Get()
-		local oc_height = -30
+		local oc_height = -50
 		result.layers:Constant(oc_final, oc_height)
 
 			
