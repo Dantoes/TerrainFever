@@ -99,7 +99,9 @@ return {
 
 		local sameSeed = math.random(1, 100000000)
 		math.randomseed(sameSeed) -- reset seed to match desert generator
-	
+		
+		-- heightmapLayer does not get cleared automatically the map editor
+		result.layers:Constant(result.heightmapLayer, 0)
 
 		
 		-- ###########################################################################################################
@@ -132,7 +134,8 @@ return {
 		local noLakes = lakeProbability == 0
 	
 		local humidity = params.trees / 20
-
+		
+		
 
 		
 		-- ###########################################################################################################
