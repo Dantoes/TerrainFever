@@ -71,7 +71,7 @@ data.Make = function(layers, config, mkTemp, heightMap, waterDistanceMap, highMo
 	-- #### Conifiers near / on mountains
 	-- ###########################################################################################################
 	local coniferMask = mkTemp:Get()
-	layers:Copy(highMountainMask, coniferMask)
+	layers:Mul(highMountainMask, heightCutoffMap, coniferMask)
 	
 	local coniferForestShapeMask = mkTemp:Get()
 	layers:GradientNoise(coniferForestShapeMask, {numOctaves = 5, frequency = 1 / 1000, lacunarity = 2, gain = 0.8, warp = 0.2})
