@@ -76,8 +76,8 @@ function tfExtensions.Exlerp(layers, from, to, subdivisions)
 	local step = 1 / subdivisions
 	local count = subdivisions
 	
-	a = {}
-	b = {}
+	local a = {}
+	local b = {}
 	
 	for i = 0, count, 1 do
 		a[i] = i * step
@@ -91,8 +91,8 @@ function tfExtensions.Exlerp2(layers, from, to, subdivisions)
 	local step = 1 / subdivisions
 	local count = subdivisions
 	
-	a = {}
-	b = {}
+	local a = {}
+	local b = {}
 	
 	for i = 0, count, 1 do
 		a[i] = i * step

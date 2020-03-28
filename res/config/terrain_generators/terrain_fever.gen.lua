@@ -660,13 +660,15 @@ return {
 			result.layers, assetConfig, mkTemp, result.heightmapLayer, distanceMap, highMountainMask)
 		result.layers:PopColor()		
 		
+		distanceMap = nil
 		
 		-- #################
 		-- #### FINISH
         mkTemp:Restore(blendedTerrain)
-        mkTemp:Restore(distanceMap)
         mkTemp:Restore(distributionMap)
         mkTemp:Restore(highMountainMask)
+		mkTemp:Restore(result.forestMap)
+		mkTemp:Restore(result.assetsMap)
 		mkTemp:Finish()
 		-- maputil.PrintGraph(result)
 	
